@@ -15,7 +15,7 @@ export default function page() {   // async removed since we use CSR now
 
   // ****************  CSR ***********
   const [blogs, setBlogs] = useState([]);
-  const [count, setCount] = useState(3);  // initial blogs to show
+  const [count, setCount] = useState(4);  // initial blogs to show
   const [hasMore, setHasMore] = useState(true);  // track if more blogs exist
 
   // fetching all blogs from endpoint
@@ -43,8 +43,8 @@ export default function page() {   // async removed since we use CSR now
       return;
     }
 
-    setBlogs(res.data.slice(0, count + 3));  // load 3 more
-    setCount(count + 3);
+    setBlogs(res.data.slice(0, count + 4));  // load 4 more
+    setCount(count + 4);
   };
 
   return (
