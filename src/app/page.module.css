@@ -302,3 +302,66 @@ a.secondary {
     opacity: 1;
   }
 }
+
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+@media (max-width: 768px) {
+  .navLinks {
+    position: fixed; /* stick to screen, not scroll */
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    display: none;
+    z-index: 999;
+    height: calc(100vh - 64px); /* full height minus nav height */
+    overflow-y: auto; /* scrollable if too long */
+  }
+
+  .showMenu {
+    display: flex;
+  }
+
+  .navLinks li {
+    margin: 16px 0;
+  }
+
+  .navLinks li a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+  }
+}
