@@ -1,0 +1,114 @@
+/* === Page Load Animation === */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInSlideUp 0.8s ease-out both;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.input,
+.textarea {
+  padding: 0.9rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transition: 
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #aaa;
+  animation: placeholderGlow 2s infinite ease-in-out;
+}
+
+.input:hover,
+.textarea:hover {
+  transform: translateY(-2px);
+  border-color: #66b2ff;
+  box-shadow: 0 4px 12px rgba(102, 178, 255, 0.2);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #66b2ff;
+  background-color: rgba(255, 255, 255, 0.08);
+  outline: none;
+  box-shadow: 0 0 10px rgba(102, 178, 255, 0.5);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.button {
+  background: linear-gradient(to right, #007bff, #00d4ff);
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #0056b3, #0096c7);
+  transform: translateY(-3px);
+}
+
+/* === Placeholder animation === */
+@keyframes placeholderGlow {
+  0%   { color: #aaa; }
+  50%  { color: #ccc; }
+  100% { color: #aaa; }
+}
