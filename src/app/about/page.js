@@ -4,7 +4,7 @@ import styles from './About.module.css';
 export default function AboutPage() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>About <span className={styles.highlight}>Hunting Coder</span></h1>
+      <h1 className={styles.title}>About <span className={styles.highlight}>Shubhra's Coder</span></h1>
 
       <section className={styles.section}>
         <h2 className={styles.subtitle}>🚀 Our Mission</h2>
